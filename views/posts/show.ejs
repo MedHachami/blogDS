@@ -61,7 +61,8 @@
     <div class="container_copy">
       <h3><%= post.createdAt.toLocaleDateString() %></h3>
       <h1><%= post.title %></h1>
-      <p><%= post.description %></p>
+      <p><%= post.resume %></p>
+	  <p><%= post.content %></p>
       <a href="/" class="btn btn-secondary" >All Posts</a>
       <a href="/posts/edit/<%= post.id %>" class="btn btn-info">Edit</a>
     </div>

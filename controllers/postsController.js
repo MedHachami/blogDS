@@ -15,7 +15,15 @@ async function getPost(req,res){
 
 async function addPost(req,res){
    //Créer un nouveau post dans myBlogdb et rediriger le client vers /
+   req.post = new Post()
+   let post = req.post
+    post.titre = req.body.titre
+    post.auteur = req.body.auteur
+    post.resume = req.body.resume
+    post.content = req.body.contenu
 
+    post = await post.save()
+    res.redirect(`/`)
 }
 
 async function editPost(req,res){
@@ -23,7 +31,16 @@ async function editPost(req,res){
     res.render('posts/edit', { post: post })
 }
 async function updatePost(req,res){
-    //metre à jour un post et rediriger le client vers ce post
+    
+    req.post = await Post.findById(req.params.id)
+    let post = req.post
+    post.titre = req.body.titre
+    post.auteur = req.body.auteur
+    post.resume = req.body.resume
+    post.content = req.body.contenu
+
+    post = await post.save()
+    res.redirect(`/`)
 }
 
 async function deletePost(req,res){
