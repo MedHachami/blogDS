@@ -447,3 +447,10 @@ ul.tags li a:hover {
 	width: 300px;
 }
 
+.blog_post{
+	width: 30rem;
+	height: 300px;
+	border: 2px bold #000;
+	border-radius: 3px;
+	text-align: center;
+}

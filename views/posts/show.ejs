@@ -47,17 +47,15 @@
 <!-- Begin Site Title
 ================================================== -->
 <div class="container">
-	<div class="mainheading">
-		<h1 class="sitetitle"><%= post.auteur %></h1>
-		
-	</div>
+	
 <!-- End Site Title
 ================================================== -->
 
 <div class="blog_post">
-    <div class="img_pod">
-      <img src="https://pbs.twimg.com/profile_images/890901007387025408/oztASP4n.jpg" alt="random image" style="height: 120px;">
-    </div>
+    <div class="mainheading">
+		<h1 class="sitetitle"><%= post.auteur %></h1>
+		
+	</div>
     <div class="container_copy">
       <h3><%= post.createdAt.toLocaleDateString() %></h3>
       <h1><%= post.title %></h1>
