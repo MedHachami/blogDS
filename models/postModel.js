@@ -12,7 +12,7 @@ const postSchema=mongoose.Schema({
      auteur:{
          // chaine de caractère avec la valeur "unkown" par defaut
          type: String,
-         default: "unkown"
+         required: true,
      },
      resume:{
          // chaine de caractère non nulle de moins de 100 caractères
@@ -34,3 +34,4 @@ const postSchema=mongoose.Schema({
 }, {timestamps:true})
 
 //créer et exporter un Modéle Post
+module.exports = mongoose.model('Post',postSchema)
