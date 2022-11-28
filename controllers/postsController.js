@@ -45,6 +45,8 @@ async function updatePost(req,res){
 
 async function deletePost(req,res){
     //Suprimer un post et rediriger le client vers /
+    await Post.findByIdAndDelete(req.params.id)
+    res.redirect('/')
 }
 
 module.exports={getPosts,getPost,addPost,editPost,updatePost,deletePost}
